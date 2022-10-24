@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,digito,num2,digito2,pos,pos2,original;
+    printf("Algoritmo JPinto\n");
+    scanf("%d",&num);
+    original=num;
+    pos=1;
+    do
+    {
+        digito=num%10;
+        num=num/10;
+        //printf("numero: %d\n",digito);
+        num2=num;
+        pos2=pos+1;
+        do{
+           digito2=num2%10;
+           num2=num2/10;
+           if (digito==digito2)printf("O numero: %d tem o digito %d na posicao %d e na posicao %d \n",original,digito,pos,pos2);
+           pos2++;
+        }while (num2>0);
+        pos++;
+    }while (num>0);
+    scanf("%d",&num);
+    return 0;
+}
