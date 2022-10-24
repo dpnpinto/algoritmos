@@ -9,21 +9,26 @@ int main()
     scanf("%d",&num);
     original=num;
     pos=1;
-    do
+    while(num>0)
     {
         digito=num%10;
+        printf("numero: %d\n",num);
         num=num/10;
-        //printf("numero: %d\n",digito);
+        printf("digito: %d\n",digito);
         num2=num;
         pos2=pos+1;
-        do{
+        while(num2>0)
+        {
+           printf("numero2: %d\n",num2);
            digito2=num2%10;
+           printf("digito2: %d\n",digito2);
+           printf("digito: %d\n",digito);
            num2=num2/10;
            if (digito==digito2)printf("O numero: %d tem o digito %d na posicao %d e na posicao %d \n",original,digito,pos,pos2);
            pos2++;
-        }while (num2>0);
+        };
         pos++;
-    }while (num>0);
+    };
     scanf("%d",&num);
     return 0;
 }
