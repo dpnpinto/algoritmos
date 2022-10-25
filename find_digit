@@ -12,17 +12,17 @@ int main()
     while(num>0)
     {
         digito=num%10;
-        printf("numero: %d\n",num);
+        // printf("numero: %d\n",num); //for debug
         num=num/10;
-        printf("digito: %d\n",digito);
+        // printf("digito: %d\n",digito); // for debug
         num2=num;
         pos2=pos+1;
         while(num2>0)
         {
-           printf("numero2: %d\n",num2);
+           // printf("numero2: %d\n",num2); //for debug
            digito2=num2%10;
-           printf("digito2: %d\n",digito2);
-           printf("digito: %d\n",digito);
+           // printf("digito2: %d\n",digito2); //for debug
+           // printf("digito: %d\n",digito);  //for debug
            num2=num2/10;
            if (digito==digito2)printf("O numero: %d tem o digito %d na posicao %d e na posicao %d \n",original,digito,pos,pos2);
            pos2++;
